@@ -1,0 +1,219 @@
+/* AutoBahn Specials - style.css */
+
+:root {
+  --primary: #4f46e5;
+  --text: #1f2937;
+  --bg: #f9fafb;
+  --white: #ffffff;
+  --gray: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  margin-right: 1rem;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Search */
+.search-section {
+  margin: 1.5rem auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.filter.active, .filter:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Listings */
+.listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  padding: 0 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-img {
+  background: #e5e7eb;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card .meta {
+  color: var(--gray);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.card .price {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card .tags span {
+  background: #eef2ff;
+  color: var(--primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.card button {
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Detail Panel */
+.detail {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  bottom: 2rem;
+  width: 380px;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+#closeDetail {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  color: var(--gray);
+  cursor: pointer;
+  float: right;
+}
+
+footer {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  margin-top: auto;
+}
