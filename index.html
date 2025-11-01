@@ -1,0 +1,46 @@
+
+<!-- AutoBahn Specials - versión HTML/CSS/JS pura para GitHub Pages -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoBahn Specials</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">AutoBahn <span>Specials</span></div>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Coches</a>
+        <a href="#">Piezas</a>
+        <a href="#">Guías</a>
+        <button id="addBtn">+ Añadir anuncio</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Buscar coches o piezas..." />
+      </section>
+
+      <section class="filters">
+        <button class="filter active" data-type="all">Todos</button>
+        <button class="filter" data-type="car">Coches</button>
+        <button class="filter" data-type="part">Piezas</button>
+      </section>
+
+      <section id="listings" class="listings"></section>
+    </main>
+
+    <div id="detailPanel" class="detail hidden">
+      <button id="closeDetail">×</button>
+      <div id="detailContent"></div>
+    </div>
+
+    <footer>© <span id="year"></span> AutoBahn Specials</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
